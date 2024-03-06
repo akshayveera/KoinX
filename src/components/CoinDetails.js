@@ -11,7 +11,7 @@ const CoinDetails = () => {
     console.log(params?.cryptoId);
 
   return (
-    <div>
+    <div className='flex justify-between'>
         <CoinDetailsBody/>
         <SideBar/>
     </div>

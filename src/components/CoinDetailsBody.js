@@ -73,7 +73,7 @@ const CoinDetailsBody = () => {
         <div className='flex flex-col gap-1 border-b pb-10'>
             <div className='flex items-center'>
                 <p className='text-4xl font-semibold'>{"$"+UsformatCommas(usd) }</p>
-                <div className={'flex items-center gap-2 bg-red-100 px-3 py-1 rounded-md ml-10 mr-3 '}>
+                <div className={'flex items-center gap-2 px-3 py-1 rounded-md ml-10 mr-3 ' + ( usd_24h_change>=0 ? "bg-green-100" : "bg-red-100")}>
                     <PriceChange price={usd_24h_change}/>
                 </div>
                 <p className='text-gray-500 font-semibold'>(24 H)</p>
@@ -85,7 +85,7 @@ const CoinDetailsBody = () => {
         <div>
             <div className='flex justify-between'>
                 <p className='text-lg font-semibold'>{name} Price Chart (USD)</p>
-                <div className='flex gap-2 font-semibold text-gray-500 mb-5'>
+                <div className='flex gap-5 font-semibold text-gray-500 mb-5'>
                     {intervalArr.map((item)=>{
                         return <button key={item}>{item}</button>
                     })}

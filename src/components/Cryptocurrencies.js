@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react'
-import { coinsMarketURL } from './Constants';
+import { coinsMarketURL } from './utils/Constants';
 import CryptoRow from './CryptoRow';
 import { Link } from 'react-router-dom';
 
