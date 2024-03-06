@@ -8,7 +8,6 @@ import { PriceChange } from './utils/PriceChange'
 const CryptoRow = ({data}) => {
 
     const {
-        id,
         symbol, 
         name, 
         image, 

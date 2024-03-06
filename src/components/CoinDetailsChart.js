@@ -4,7 +4,7 @@ import { PriceChange } from './utils/PriceChange';
 import { IndformatCommas, UsformatCommas } from './utils/currency';
 import TradingViewWidget from "./utils/PriceChart"
 
-const CoinDetailsBody = () => {
+const CoinDetailsChart = () => {
 
     const [coinData, setCoinData] = useState(
         {
@@ -62,7 +62,7 @@ const CoinDetailsBody = () => {
     const intervalArr = ["1H", "24H", "7D", "1M", "3M", "6M", "1Y", "ALL"]
 
   return (
-    <div className='bg-white p-7 rounded-lg flex flex-col gap-10 w-[65%]'>
+    <div className='bg-white p-7 rounded-lg flex flex-col gap-10 w-full'>
         <div className='flex gap-3 items-center'>
             <img className='h-10' src={image} alt="" />
             <p className='text-3xl font-semibold'>{name}</p>
@@ -83,8 +83,9 @@ const CoinDetailsBody = () => {
         </div>
 
         <div>
+
             <div className='flex justify-between'>
-                <p className='text-lg font-semibold'>{name} Price Chart (USD)</p>
+                <p className='text-xl font-semibold'>{name} Price Chart (USD)</p>
                 <div className='flex gap-5 font-semibold text-gray-500 mb-5'>
                     {intervalArr.map((item)=>{
                         return <button key={item}>{item}</button>
@@ -100,4 +101,4 @@ const CoinDetailsBody = () => {
   )
 }
 
-export default CoinDetailsBody
+export default CoinDetailsChart

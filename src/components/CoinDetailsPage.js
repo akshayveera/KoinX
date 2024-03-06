@@ -1,8 +1,8 @@
 
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import CoinDetailsBody from './CoinDetailsBody';
 import SideBar from './SideBar';
+import CoinDetailsMain from './CoinDetailsMain';
 
 const CoinDetails = () => {
 
@@ -12,7 +12,7 @@ const CoinDetails = () => {
 
   return (
     <div className='flex justify-between'>
-        <CoinDetailsBody/>
+        <CoinDetailsMain/>
         <SideBar/>
     </div>
   )

@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Cryptocurrencies from './components/Cryptocurrencies';
-import CoinDetails from './components/CoinDetails';
+import CoinDetailsPage from './components/CoinDetailsPage';
+import { Provider } from 'react-redux';
+import store from "./components/utils/store"
 
 const routing = createBrowserRouter([
   {
@@ -16,7 +18,7 @@ const routing = createBrowserRouter([
       },
       {
         path : "/:cryptoId",
-        element : <CoinDetails/>
+        element : <CoinDetailsPage/>
       }
     ]
   }
@@ -24,7 +26,9 @@ const routing = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={routing}>
-    <App/>
-  </RouterProvider>
+  <Provider store={store}>
+    <RouterProvider router={routing}>
+      <App/>
+    </RouterProvider>
+  </Provider>
 );

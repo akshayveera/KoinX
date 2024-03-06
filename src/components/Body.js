@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom'
 
 const Body = () => {
   return (
-    <section className='bg-slate-100 px-16 pb-10'>
+    <section className='bg-slate-200 px-16 pb-10'>
         <AppPath/>
         <Outlet/>
     </section>
