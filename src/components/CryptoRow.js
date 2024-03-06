@@ -1,40 +1,32 @@
 
 import React from 'react'
-import arrowUp from "../assets/arrow-up.png"
-import arrowDown from "../assets/arrow-down.png"
-import { UsformatCommas, IndformatCommas } from './utils/Currency'
 
-const PriceChange = ({price})=>{
+import { UsformatCommas, IndformatCommas } from './utils/currency'
+import { PriceChange } from './utils/PriceChange'
 
-    if(price>=0)
-    {
-        return (
-            <>
-                <img className='h-3.5' src={arrowUp} alt="arrow up" />
-                <p className='font-semibold text-md text-[#0fba83]'>{String(price).slice(0,4) + "%"}</p>
-            </>
-        )
-    }
-    else{
-        return (
-            <>
-                <img className='h-3.5' src={arrowDown} alt="arrow down" />
-                <p className='font-semibold text-md text-[#f7324c]'>{String(price).slice(0,5) + "%"}</p>
-            </>
-        )
-    }
-}
 
-const CryptoRow = ({data, number}) => {
+const CryptoRow = ({data}) => {
 
-    const {id, symbol, name, image, current_price,price_change_percentage_1h_in_currency, price_change_percentage_24h_in_currency,price_change_percentage_7d_in_currency,market_cap, circulating_supply } = data;
+    const {
+        id,
+        symbol, 
+        name, 
+        image, 
+        current_price,
+        price_change_percentage_1h_in_currency, 
+        price_change_percentage_24h_in_currency,
+        price_change_percentage_7d_in_currency,
+        market_cap, 
+        circulating_supply, 
+        market_cap_rank 
+    } = data;
 
 
   return (
-    <div className={'flex items-center h-16 ' + (number==250 ? "" :'border-b-2')}>
+    <div className={'flex items-center h-16 ' + (market_cap_rank==250 ? "" :'border-b-2')}>
 
         <div className='flex items-center gap-3 w-[20%] pl-7'>
-            <div className='text-gray-500'>{number}</div>
+            <div className='text-gray-500'>{market_cap_rank }</div>
             <img className='h-7' src={image} alt="crypto icon" />
             <div className='flex flex-col '>
                 <p className='font-semibold'>{name}</p>
