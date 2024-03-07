@@ -28,7 +28,7 @@ const CoinDetailsChart = ({coinData}) => {
   return (
     <div className='bg-white p-7 rounded-lg flex flex-col gap-5 w-full'>
         <div className='flex gap-3 items-center'>
-            <img className='h-10' src={image} alt="image" />
+            <img className='h-10' src={image} alt="logo of coin" />
             <p className='text-3xl font-semibold'>{name}</p>
             <p className='text-gray-500 font-semibold'>{(symbol && symbol.toUpperCase())}</p>
             <p className='bg-gray-500 text-white text-lg py-1.5 px-4 rounded-lg ml-3'>{"Rank #" + market_cap_rank}</p>

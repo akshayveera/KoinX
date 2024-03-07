@@ -33,11 +33,11 @@ const SideBar = () => {
 
   const dispatch = useDispatch();
 
-  useEffect((dispatch)=>{
-    
+  useEffect(()=>{
+
       getTrendingCoins();
 
-      return (dispatch)=>{
+      return ()=>{
         dispatch(clearSpikes());
       }
   }, [])
