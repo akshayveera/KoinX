@@ -62,7 +62,7 @@ const SideBar = () => {
         <div  className='text-center text-white text-2xl font-semibold w-[80%]'>Get Started with KoinX for FREE</div>
         <div  className='text-center text-[#eee]'>With our range of features that you can equip for free, KoinX allows you to be more educated and aware of your tax reports</div>
         <img className=' h-[240px]' src="https://www.koinx.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLowerSection.7ba5b083.png&w=384&q=75" alt="img" />
-        <button className='flex items-center gap-2 bg-white px-5 py-2 text-lg font-semibold rounded-lg'> Get Started for FREE <img key="right arrow" className='h-4' src={rightArrow} alt="" /></button>
+        <button className='flex items-center gap-2 bg-white px-5 py-2 text-lg font-semibold rounded-lg'> Get Started for FREE <img key="right arrow" className='h-4' src={rightArrow} alt="right-arrow" /></button>
       </div>
 
       <div className=' bg-white p-7 rounded-2xl h-fit flex flex-col gap-5 xl:w-full md:w-[48%] w-full '> 
