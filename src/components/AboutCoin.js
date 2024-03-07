@@ -31,7 +31,7 @@ const AboutCoin = () => {
                 <div className='md:w-[47%] w-full bg-gradient-to-br from-green-400 to-blue-400 flex p-5 rounded-lg gap-5'>
                     <img 
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBuXo7TQ9lQTfUbMk6ZzC49GmydUOmlBReZ4K2RlQXmun2Hr1dLmV8llLUzWsYvGEpnN4&usqp=CAU" 
-                        alt="image of crypto"
+                        alt="image1 of crypto"
                         className='w-[40%] h-[130px] rounded-lg' 
                     />
 
@@ -44,7 +44,7 @@ const AboutCoin = () => {
                 <div className='md:w-[47%] w-full bg-gradient-to-br from-orange-300 to-red-500 flex p-5 rounded-lg gap-5 '>
                     <img 
                         src="https://miro.medium.com/v2/da:true/resize:fill:224:224/0*r5JCF5DGDh_GP2xD" 
-                        alt="image of crypto"
+                        alt="image2 of crypto"
                         className='w-[40%] h-[130px] rounded-lg' 
                     />
 

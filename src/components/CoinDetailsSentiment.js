@@ -12,7 +12,7 @@ const PreviousBtn = (props) => {
   return (
     <div className={className} onClick={onClick}>
       <div className=''>
-        <img className='h-5' src={lArrow} alt="image" />
+        <img className='h-5' src={lArrow} alt="left arrow" />
       </div>
     </div>
   );
@@ -22,7 +22,7 @@ const NextBtn = (props) => {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <img className='h-5' src={rArrow} alt="image" />
+      <img className='h-5' src={rArrow} alt="right arrow" />
     </div>
   );
 };

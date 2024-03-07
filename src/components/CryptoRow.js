@@ -22,7 +22,7 @@ const CryptoRow = ({data}) => {
 
 
   return (
-    <div className={'flex items-center h-16  ' + (market_cap_rank==250 ? "" :'border-b-2')}>
+    <div className={'flex items-center h-16  ' + (market_cap_rank===250 ? "" :'border-b-2')}>
 
         <div className='flex items-center gap-3 xl:w-[20%] sm:w-[30%]  w-[60%] pl-7'>
             <div className='text-gray-500'>{market_cap_rank }</div>

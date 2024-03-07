@@ -16,9 +16,8 @@ const CoinDetailsMain = () => {
   const [coinData, setCoinData] = useState(null);
   
   const params = useParams();
-  console.log(params.cryptoId);
 
-  useEffect(()=>{
+  useEffect((params)=>{
     getCoinData(params.cryptoId)
   }, [])
 

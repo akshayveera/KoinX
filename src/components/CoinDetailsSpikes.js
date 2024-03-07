@@ -65,7 +65,7 @@ const CoinDetailsSpikes = () => {
 
     useEffect(()=>{
         setSpikesArr(data);
-    })
+    }, [])
 
     console.log("SpikesArr : ", spikesArr);
 

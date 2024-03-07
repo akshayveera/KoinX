@@ -12,7 +12,7 @@ const AppPath = () => {
     useEffect(()=>{
       if(params.cryptoId)
       {
-        setStr("Cryptocurrencies"+" > "+params.cryptoId);
+        setStr("Cryptocurrencies > "+ params.cryptoId);
         setNotHome(true);
       }else{
         setNotHome(false);
@@ -27,7 +27,7 @@ const AppPath = () => {
   return (
     <div className='py-5 px-2 font-semibold text-gray-600 text-sm flex gap-2'>
         <div>{str}</div>
-        {notHome && <Link to="/">{"<"}</Link> }        
+        {notHome && (<Link to="/">{"<"}</Link>) }        
     </div>
   )
 }

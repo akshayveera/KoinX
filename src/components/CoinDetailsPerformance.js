@@ -25,7 +25,7 @@ const CoinDetailsPerformance = () => {
     const fundamentalsLeft = [ name+" Price", "24 Low / 24h High", "7d Low / 7d High", "Trading Volume", "Market Cap Rank"];
     const fundamentalsRight = ["Market Cap", "Maximum Supply", "Volume / Market Cap", "All-Time High", "All-Time-Low"];
 
-    const fundamentalValuesLeft = [ current_price && "$"+UsformatCommas(current_price) , high_24h && low_24h && "$"+UsformatCommas(high_24h)+" / "+"$"+UsformatCommas(low_24h), high_24h && low_24h && "$"+UsformatCommas(high_24h)+" / "+"$"+UsformatCommas(low_24h), total_volume && "$"+UsformatCommas(total_volume), market_cap_rank && "#"+market_cap_rank];
+    const fundamentalValuesLeft = [ current_price && "$"+UsformatCommas(current_price) , high_24h && low_24h && "$"+UsformatCommas(high_24h)+" / $"+UsformatCommas(low_24h), high_24h && low_24h && "$"+UsformatCommas(high_24h)+" / $"+UsformatCommas(low_24h), total_volume && "$"+UsformatCommas(total_volume), market_cap_rank && "#"+market_cap_rank];
     const fundamentalValuesRight = [ market_cap && "$"+UsformatCommas(market_cap) , "$21,000", vol_by_cap , ath && "$"+UsformatCommas(ath) , atl && "$"+UsformatCommas(atl)];
     
     

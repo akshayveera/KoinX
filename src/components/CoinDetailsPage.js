@@ -10,9 +10,9 @@ const CoinDetails = () => {
 
   const dispatch = useDispatch();
 
-  useEffect(()=>{
+  useEffect((dispatch)=>{
     
-    return ()=>{
+    return (dispatch)=>{
       dispatch(clearData());
     }
   },[])
