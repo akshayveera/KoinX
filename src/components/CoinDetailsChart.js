@@ -21,7 +21,7 @@ const CoinDetailsChart = ({coinData}) => {
         symbol,
         market_cap_rank,  
 
-    } = coinDetailsRedux
+    } = coinDetailsRedux;
 
     const intervalArr = ["1H", "24H", "7D", "1M", "3M", "6M", "1Y", "ALL"]
 

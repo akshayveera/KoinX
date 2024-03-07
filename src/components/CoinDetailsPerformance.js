@@ -16,11 +16,8 @@ const CoinDetailsPerformance = () => {
         total_volume,
         market_cap_rank,
         market_cap,        
-        max_supply,
         ath,
-        ath_change_percentage,
         atl,
-        atl_change_percentage,
     } = coinDetailsRedux
 
     const vol_by_cap = String(total_volume / market_cap).slice(0,6);
