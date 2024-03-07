@@ -1,6 +1,6 @@
 
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux';
 import { UsformatCommas } from './utils/currency';
 

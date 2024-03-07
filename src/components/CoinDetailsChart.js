@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { PriceChange } from './utils/PriceChange';
 import { IndformatCommas, UsformatCommas } from './utils/currency';
 import TradingViewWidget from "./utils/PriceChart"

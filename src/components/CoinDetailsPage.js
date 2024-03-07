@@ -1,6 +1,5 @@
 
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
 import SideBar from './SideBar';
 import CoinDetailsMain from './CoinDetailsMain';
 import { useDispatch } from 'react-redux';
