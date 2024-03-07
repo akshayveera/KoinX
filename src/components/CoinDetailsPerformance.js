@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { useSelector } from 'react-redux';
-import { UsformatCommas } from './utils/currency';
+import { UsformatCommas } from './utils/Currency';
 
 const CoinDetailsPerformance = () => {
 

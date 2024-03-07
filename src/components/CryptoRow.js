@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import { UsformatCommas, IndformatCommas } from './utils/currency'
+import { UsformatCommas, IndformatCommas } from './utils/Currency'
 import { PriceChange } from './utils/PriceChange'
 
 

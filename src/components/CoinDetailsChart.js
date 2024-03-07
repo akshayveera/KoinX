@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { PriceChange } from './utils/PriceChange';
-import { IndformatCommas, UsformatCommas } from './utils/currency';
+import { IndformatCommas, UsformatCommas } from './utils/Currency';
 import TradingViewWidget from "./utils/PriceChart"
 import { useSelector } from 'react-redux';
 
