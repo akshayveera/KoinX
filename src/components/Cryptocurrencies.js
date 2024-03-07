@@ -110,7 +110,7 @@ const Cryptocurrencies = (idx) => {
 
     useEffect(()=>{
 
-        getCryptoData();
+        // getCryptoData();
 
     }, [])
 
