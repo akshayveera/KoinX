@@ -10,8 +10,9 @@ const CoinDetailsTokenomics = () => {
 
         <h2 className='text-2xl font-semibold'>Initial Distrubution</h2>
 
-        <div className='flex gap-10'>
-            <img className='h-44' src={pieChart} alt="pie chart" />
+        <div className='flex md:gap-10 gap-4'>
+
+            <img className='md:h-44 h-32' src={pieChart} alt="pie chart" />
 
             <div className='flex flex-col justify-center gap-3'>
 

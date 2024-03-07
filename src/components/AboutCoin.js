@@ -24,11 +24,11 @@ const AboutCoin = () => {
             <p className='text-lg font-semibold text-gray-700'>Nemo neque quo rerum omnis esse laboriosam, accusamus explicabo velit quaerat deleniti doloremque, repellat sequi optio, unde et culpa. Aperiam voluptatem nam consectetur hic reprehenderit! Repellendus saepe officiis enim. Quaerat, asperiores!</p>
         </div>
 
-        <div className='flex flex-col gap-3 py-3 pb-5 border-b-2'>
+        <div className='flex flex-col gap-3 py-3 pb-5 border-b-2 '>
             <h1 className='text-2xl font-semibold'>Already Holding Crypto?</h1>
 
-            <div className='flex justify-between'>
-                <div className='w-[47%] bg-gradient-to-br from-green-400 to-blue-400 flex p-5 rounded-lg gap-5'>
+            <div className='md:flex-row md:gap-0 flex flex-col gap-5 justify-between'>
+                <div className='md:w-[47%] w-full bg-gradient-to-br from-green-400 to-blue-400 flex p-5 rounded-lg gap-5'>
                     <img 
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBuXo7TQ9lQTfUbMk6ZzC49GmydUOmlBReZ4K2RlQXmun2Hr1dLmV8llLUzWsYvGEpnN4&usqp=CAU" 
                         alt="image of crypto"
@@ -41,7 +41,7 @@ const AboutCoin = () => {
                     </div>
                 </div>
 
-                <div className='w-[47%] bg-gradient-to-br from-orange-300 to-red-500 flex p-5 rounded-lg gap-5 '>
+                <div className='md:w-[47%] w-full bg-gradient-to-br from-orange-300 to-red-500 flex p-5 rounded-lg gap-5 '>
                     <img 
                         src="https://miro.medium.com/v2/da:true/resize:fill:224:224/0*r5JCF5DGDh_GP2xD" 
                         alt="image of crypto"

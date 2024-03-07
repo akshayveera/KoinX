@@ -7,7 +7,7 @@ import Body from './components/Body';
 
 function App() {
   return (
-      <section className="App">
+      <section className="App overflow-x-hidden">
         <Header/>
         <Body/>
       </section>

@@ -3,15 +3,24 @@ import { createSlice } from "@reduxjs/toolkit";
 const appSlice = createSlice({
     name : "app",
     initialState : {
-        coinDetails : {}
+        coinDetails : {},
+        spikesArray : []
     },
     reducers : {
         addItem : (state, action)=>{
             state.coinDetails = {...state.coinDetails, ...action.payload};
-            console.log(state.coinDetails);
+        },
+        clearData : (state)=>{
+            state.coinDetails = {};
+        },
+        addSpikes : (state, action)=>{
+            state.spikesArray = [...state.spikesArray, ...action.payload];
+        },
+        clearSpikes : (state)=>{
+            state.spikesArray = [];
         }
     }
 })
 
 export default appSlice.reducer;
-export const {addItem} = appSlice.actions;
+export const {addItem, clearData, addSpikes, clearSpikes} = appSlice.actions;
