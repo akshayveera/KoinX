@@ -19,7 +19,7 @@ const CoinDetailsMain = () => {
 
   useEffect(()=>{
     getCoinData(params.cryptoId)
-  }, [])
+  }, [params.cryptoId])
 
   async function getCoinData(id){
 

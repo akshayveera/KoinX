@@ -15,7 +15,7 @@ const CoinDetails = () => {
     return ()=>{
       dispatch(clearData());
     }
-  },[])
+  },[dispatch])
 
   return (
     <div className='  xl:flex-row xl:justify-between xl:gap-0 flex flex-col gap-10  '>

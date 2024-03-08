@@ -40,7 +40,7 @@ const SideBar = () => {
       return ()=>{
         dispatch(clearSpikes());
       }
-  }, [])
+  }, [dispatch, getTrendingCoins])
 
   async function getTrendingCoins(){
     const data = await fetch(trendingCoinsURL);

@@ -13,6 +13,7 @@ const Team = () => {
             <div className='flex flex-col items-center gap-2'>
                 <img 
                 src="https://wellfound.com/cdn-cgi/image/width=200,height=200,format=auto,fit=cover/https://photos.wellfound.com/users/14494429-original?1665600942"
+                alt=''
                 className='h-32 w-32 object-fill rounded-lg' />
                 <div className='flex flex-col items-center'>
                     <p className='font-semibold text-md'>Punit Agarwal</p>
@@ -26,7 +27,7 @@ const Team = () => {
             <div className='flex flex-col items-center gap-2'>
                 <img 
                 src="https://media.licdn.com/dms/image/C5103AQFhDH6GFC_TYA/profile-displayphoto-shrink_400_400/0/1516356425447?e=1715212800&v=beta&t=v1V19AphHzx5iVBvPV4h-dbdN9Lw6f1w7gxsIX3iVyc" 
-                
+                alt=''
                 className='h-32 w-32 object-fill rounded-lg' />
                 <div className='flex flex-col items-center'>
                     <p className='font-semibold text-md'>Swadeep Pillarisetti</p>
@@ -40,7 +41,7 @@ const Team = () => {
             <div className='flex flex-col items-center gap-2'>
                 <img 
                 src="https://media.licdn.com/dms/image/D5603AQFCscRkoHJnmQ/profile-displayphoto-shrink_400_400/0/1674065879307?e=1715212800&v=beta&t=O247V-s7J9AcItRvRxieMg1xM3zzJzzvcz4Uy7D4yYc" 
-                
+                alt=''
                 className='h-32 w-32 object-fill rounded-lg' />
                 <div className='flex flex-col items-center'>
                     <p className='font-semibold text-md'>Guna Shekar</p>
