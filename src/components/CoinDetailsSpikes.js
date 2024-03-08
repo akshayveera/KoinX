@@ -98,7 +98,7 @@ const CoinDetailsSpikes = () => {
             <div>
                 <Slider {...settings}>
 
-                    {spikesArr.reverse().map((data)=>{
+                    {[...spikesArr].reverse().map((data)=>{
                         return <SpikesTrending key={data?.item?.id + "-" + data?.item?.coin_id} info={data?.item}/>
                     }) }
 
