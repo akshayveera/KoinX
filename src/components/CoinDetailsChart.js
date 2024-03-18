@@ -35,9 +35,9 @@ const CoinDetailsChart = ({coinData}) => {
         </div>
 
         <div className='flex flex-col gap-1 border-b pb-10'>
-            <div className='flex items-center'>
+            <div className='flex md:flex-row flex-col md:items-center'>
                 <p className='text-4xl font-semibold'>{(usd && "$"+UsformatCommas(usd)) }</p>
-                <div className={'flex items-center gap-2 px-3 py-1 rounded-md ml-10 mr-3 ' + ( usd_24h_change>=0 ? "bg-green-100" : "bg-red-100")}>
+                <div className={'flex items-center gap-2 px-3 py-1 rounded-md ml-10 mr-3 justify-left' + ( usd_24h_change>=0 ? "bg-green-100" : "bg-red-100")}>
                     <PriceChange price={usd_24h_change}/>
                 </div>
                 <p className='text-gray-500 font-semibold'>(24 H)</p>
