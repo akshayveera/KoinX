@@ -2,12 +2,13 @@
 import React, { useEffect, useState } from 'react'
 import { coinsMarketURL } from '../utils/Constants';
 import CryptoRow from './components/CryptoRow';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addItem, } from '../utils/appSlice';
 import InfiniteScroll from "react-infinite-scroll-component";
 import TableHeader from './components/TableHeader';
 import HomePageShimmer from './components/HomePageShimmer';
+import SomethingWentWrong from '../SomethingWentWrong';
 
 const HomePage = (idx) => {
 
@@ -15,6 +16,7 @@ const HomePage = (idx) => {
     const [renderData, setRenderData ] = useState(null);
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleClick = (idx)=>{
 
@@ -30,14 +32,20 @@ const HomePage = (idx) => {
     }, [])
 
     async function getCryptoData(){
-
-      const data = await fetch(coinsMarketURL);
-      const json = await data.json();
-
-      setCryptoData(json);
-      if(json && json.length) {
-        setRenderData(json?.slice(0, 15));
+      
+      try {
+        const data = await fetch(coinsMarketURL);
+        const json = await data.json();
+  
+        setCryptoData(json);
+        if(json && json.length) {
+          setRenderData(json?.slice(0, 15));
+        }
+      } catch(err) {
+        console.log(err);
+        navigate('/somethingwentwrong');
       }
+
     }
 
     async function fetchMoreData(){
@@ -50,6 +58,7 @@ const HomePage = (idx) => {
 
     }
     
+    
     if(cryptoData === null || renderData === null)
     {
       return (
@@ -59,6 +68,10 @@ const HomePage = (idx) => {
         </section>        
       )
     }    
+
+    if(cryptoData.length === 0 || renderData === 0) {
+      navigate('/somethingwentwrong');
+    }
     
   return (
     

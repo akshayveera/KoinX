@@ -38,13 +38,18 @@ const CoinDetailsMain = () => {
 
   async function getExtraCoinsData() {
 
-    const data = await fetch(coinsMarketURL + `&ids=${params.cryptoId}`);
-    const json = await data.json();
-
-    if(json.length == 0 ) {
-      navigate('/404');
-    } else {
-      setextraCoinData(json[0]);
+    try {
+      const data = await fetch(coinsMarketURL + `&ids=${params.cryptoId}`);
+      const json = await data.json();
+  
+      if(json.length == 0 ) {
+        navigate('/404');
+      } else {
+        setextraCoinData(json[0]);
+      }
+    } catch(err) {
+      console.log(err);
+      navigate('./somethingwentwrong');
     }
   }
 

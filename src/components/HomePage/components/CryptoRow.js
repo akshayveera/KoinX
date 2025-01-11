@@ -39,7 +39,7 @@ const CryptoRow = ({data}) => {
 
         <div className='sm:flex items-center gap-2 xl:w-[8%] sm:w-[17%] hidden justify-end'><PriceChange price={price_change_percentage_24h_in_currency} /></div>
 
-        <div className='sm:flex items-center gap-2 xl:w-[8%] sm:w-[17%] hidden sm:pr-7 justify-end'><PriceChange price={price_change_percentage_7d_in_currency} /></div>
+        <div className='sm:flex items-center gap-2 xl:w-[8%] sm:w-[17%] hidden justify-end'><PriceChange price={price_change_percentage_7d_in_currency} /></div>
 
         <div className='xl:w-[22%] xl:block hidden text-right font-semibold text-[#444]'>{"$"+UsformatCommas(market_cap)+".00"}</div>
 

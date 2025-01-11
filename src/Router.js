@@ -3,6 +3,7 @@ import App from './App';
 import CoinDetailsPage from './components/CoinDetailsPage/CoinDetailsPage';
 import HomePage from "./components/HomePage/HomePage";
 import PageNotFound from "./components/PageNotFound";
+import SomethingWentWrong from "./components/SomethingWentWrong";
 
 export const routesConfig = createBrowserRouter([
     {
@@ -24,7 +25,11 @@ export const routesConfig = createBrowserRouter([
             {
                 path : "*",
                 element : <PageNotFound/>
-            }
+            },
+            {
+                path : "/somethingwentwrong",
+                element : <SomethingWentWrong/>
+            },
             
         ]
     }
