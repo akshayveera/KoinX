@@ -1,12 +1,7 @@
+import React, { useState } from 'react'
+import { UsformatCommas } from '../../../utils/Currency';
 
-
-import React from 'react'
-import { useSelector } from 'react-redux';
-import { UsformatCommas } from './utils/Currency';
-
-const CoinDetailsPerformance = () => {
-
-    const coinDetailsRedux = useSelector(store=>store.app.coinDetails);
+const CoinDetailsPerformance = ({extraCoinData}) => {
 
     const {
         name,
@@ -18,7 +13,7 @@ const CoinDetailsPerformance = () => {
         market_cap,        
         ath,
         atl,
-    } = coinDetailsRedux
+    } = extraCoinData
 
     const vol_by_cap = String(total_volume / market_cap).slice(0,6);
 
@@ -33,12 +28,12 @@ const CoinDetailsPerformance = () => {
   return (
     <div className='p-7 flex flex-col gap-10 bg-white rounded-xl'>
         
-        <h1 className='text-3xl font-semibold'>Performance</h1>
+        <h1 className='text-2xl font-semibold'>Performance</h1>
 
         <div className='flex justify-between items-center'>
             
             <div className='flex flex-col items-center'>
-                <p className='text-gray-500 font-semibold text-lg'>Today's Low</p>
+                <p className='text-gray-500'>Today's Low</p>
                 <p className='text-gray-600 font-semibold text-lg'>{low_24h && "$"+UsformatCommas(low_24h)}</p>
             </div>
 
@@ -47,8 +42,8 @@ const CoinDetailsPerformance = () => {
             </div>
 
             <div className='flex flex-col items-center'>
-                <p className='text-gray-500 font-semibold text-lg'>Today's High</p>
-                <p className='text-gray-600 font-semibold text-lg'>{high_24h && "$"+UsformatCommas(high_24h)}</p>
+                <p className='text-gray-500'>Today's High</p>
+                <p className='text-gray-600 font-semibold'>{high_24h && "$"+UsformatCommas(high_24h)}</p>
             </div>
             
         </div>
@@ -56,8 +51,8 @@ const CoinDetailsPerformance = () => {
         <div className='flex justify-between items-center'>
             
             <div className='flex flex-col items-center'>
-                <p className='text-gray-500 font-semibold text-lg'>Today's Low</p>
-                <p className='text-gray-600 font-semibold text-lg'>{low_24h && "$"+UsformatCommas(low_24h)}</p>
+                <p className='text-gray-500'>Today's Low</p>
+                <p className='text-gray-600 font-semibold'>{low_24h && "$"+UsformatCommas(low_24h)}</p>
             </div>
 
             <div className=' md:w-[65%] w-[30%] h-1.5 rounded-full bg-gradient-to-r from-red-500 via-yellow-500 to-green-500'>
@@ -65,7 +60,7 @@ const CoinDetailsPerformance = () => {
             </div>
 
             <div className='flex flex-col items-center'>
-                <p className='text-gray-500 font-semibold'>Today's High</p>
+                <p className='text-gray-500'>Today's High</p>
                 <p className='text-gray-600 font-semibold'>{high_24h && "$"+UsformatCommas(high_24h)}</p>
             </div>
 
@@ -75,22 +70,22 @@ const CoinDetailsPerformance = () => {
 
         <div className='lg:flex-row flex flex-col  justify-between'>
 
-            <div className='lg:w-[45%] w-[95%] flex flex-col md:text-lg'>
+            <div className='lg:w-[45%] w-[95%] flex flex-col'>
                 {
                     fundamentalsLeft.map((item, idx)=>{
                         return (<div key={idx} className='flex justify-between py-3 border-b'>
-                            <p className='text-gray-500 font-semibold'>{item}</p>
+                            <p className='text-gray-500'>{item}</p>
                             <p className='text-gray-600 font-semibold'>{fundamentalValuesLeft[idx]}</p>
                         </div>)
                     })
                 }  
             </div>
             
-            <div className='lg:w-[45%] w-[95%] flex flex-col md:text-lg'>
+            <div className='lg:w-[45%] w-[95%] flex flex-col'>
                 {
                     fundamentalsRight.map((item, idx)=>{
                         return (<div key={idx} className='flex justify-between py-3 border-b'>
-                            <p className='text-gray-500 font-semibold'>{item}</p>
+                            <p className='text-gray-500'>{item}</p>
                             <p className='text-gray-600 font-semibold'>{fundamentalValuesRight[idx]}</p>
                         </div>)
                     })

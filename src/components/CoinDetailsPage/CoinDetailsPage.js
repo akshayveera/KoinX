@@ -1,9 +1,9 @@
 
 import React, { useEffect } from 'react'
-import SideBar from './SideBar';
-import CoinDetailsMain from './CoinDetailsMain';
+import SideBar from './SideBar/SideBar';
+import CoinDetailsMain from './CoinDetailsMain/CoinDetailsMain';
 import { useDispatch } from 'react-redux';
-import { clearData } from './utils/appSlice';
+import { clearData } from '../utils/appSlice';
 
 
 const CoinDetails = () => {

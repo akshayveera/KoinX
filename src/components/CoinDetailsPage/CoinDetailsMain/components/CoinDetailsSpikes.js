@@ -2,15 +2,14 @@
 
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
-import SpikesTrending from './SpikesTrending';
+import SpikesTrending from '../../CoinDetailsMain/components/SpikesTrending';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import rArrow from "../assets/next-arrow.png";
-import lArrow from "../assets/prev-arrow.png";
+import rArrow from "../../../../assets/next-arrow.png";
+import lArrow from "../../../../assets/prev-arrow.png";
 
 const PreviousBtn = (props) => {
-  // console.log(props);
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
@@ -67,7 +66,6 @@ const CoinDetailsSpikes = () => {
         setSpikesArr(data);
     }, [data])
 
-    console.log("SpikesArr : ", spikesArr);
 
     if(spikesArr === null)
     {
@@ -77,7 +75,7 @@ const CoinDetailsSpikes = () => {
   return (
     <div className='bg-white p-7 flex flex-col gap-10 rounded-lg'>
 
-        <h1 className='text-4xl font-semibold'>Trending Coins</h1>
+        <h1 className='text-3xl font-semibold'>Trending Coins</h1>
 
         <div>
 

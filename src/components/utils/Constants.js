@@ -5,3 +5,5 @@ export const coinDetailsURL = "https://api.coingecko.com/api/v3/simple/price?vs_
 
 export const trendingCoinsURL = "https://api.coingecko.com/api/v3/search/trending";
 
+export const koinxLogoURL = "https://www.koinx.com/_next/static/media/Logo.99e6a1dc.svg";
+

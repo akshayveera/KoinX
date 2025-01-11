@@ -3,11 +3,11 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import rArrow from "../assets/next-arrow.png";
-import lArrow from "../assets/prev-arrow.png";
+import rArrow from "../../../../assets/next-arrow.png";
+import lArrow from "../../../../assets/prev-arrow.png";
 
 const PreviousBtn = (props) => {
-  // console.log(props);
+
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
@@ -52,7 +52,7 @@ const CoinDetailsSentiment = () => {
   return (
     <div className=' bg-white rounded-lg p-7 flex flex-col gap-5'>
 
-        <h1 className='text-3xl font-semibold mb-5'>Sentiment</h1>
+        <h1 className='text-2xl font-semibold'>Sentiment</h1>
 
         <div className='flex items-center gap-2'>
           <h3 className='text-xl text-gray-500 font-semibold'>Key Events</h3>
