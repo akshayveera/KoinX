@@ -7,7 +7,7 @@ import CoinDetailsSentiment from './components/CoinDetailsSentiment'
 import AboutCoin from './components/AboutCoin'
 import CoinDetailsTokenomics from './components/CoinDetailsTokenomics'
 import Team from './components/Team'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { coinDetailsURL, coinsMarketURL } from '../../utils/Constants'
 import CoinDetailsSpikes from './components/CoinDetailsSpikes'
 import { useSelector } from 'react-redux'
@@ -18,6 +18,7 @@ const CoinDetailsMain = () => {
   const [extraCoinData, setextraCoinData] = useState(useSelector(store=>store.app.coinDetails));
   
   const params = useParams();
+  const navigate = useNavigate();
 
   useEffect(()=>{
     getCoinData(params.cryptoId);
@@ -40,7 +41,11 @@ const CoinDetailsMain = () => {
     const data = await fetch(coinsMarketURL + `&ids=${params.cryptoId}`);
     const json = await data.json();
 
-    setextraCoinData(json[0]);
+    if(json.length == 0 ) {
+      navigate('/404');
+    } else {
+      setextraCoinData(json[0]);
+    }
   }
 
   return (
