@@ -8,10 +8,10 @@ const Header = () => {
     const headerList = ["Crypto Taxes", "Free Tools", "Resource Center"];
 
     return (
-        <header className='flex justify-between items-center shadow-lg xl:px-16 px-10 py-4 '>
+        <header className='flex justify-between items-center shadow-lg px-5 sm:px-10 xl:px-12  py-4 '>
             <div className='flex'>
                 <Link to="/" className='outline-none'>
-                    <img className='w-28 outline-none' src={koinxLogoURL} alt="KoinX logo" />
+                    <img className='w-20 sm:w-28 outline-none' src={koinxLogoURL} alt="KoinX logo" />
                 </Link>
             </div>
 
@@ -26,7 +26,7 @@ const Header = () => {
 
                 </ul>
 
-                <button className='bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-2 px-7 rounded-lg'>Get Started</button>
+                <button className='bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-1 sm:py-2 px-5 sm:px-7 rounded-lg'>Get Started</button>
             </div>
         </header>
     )
